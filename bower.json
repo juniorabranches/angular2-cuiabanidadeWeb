@@ -1,0 +1,21 @@
+{
+  "name": "cuiabanidade-web",
+  "description": "",
+  "main": "src/index.html",
+  "authors": [
+    "juniorabranches <jr-abranches@hotmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/juniorabranches/CuiabanidadeApp",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "materialize": "^0.97.8"
+  }
+}
