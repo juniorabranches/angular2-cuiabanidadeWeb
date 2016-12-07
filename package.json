@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack --inline --colors --progress --display-error-details --display-cached",
     "server": "webpack-dev-server --inline --colors --progress --display-error-details --display-cached",
-    "start": "npm run server" ,   
+    "start": "node app.js" ,   
     "lint": "tslint \"src/**/*.ts\"",
     "test": "ng test",
     "pree2e": "webdriver-manager update",
