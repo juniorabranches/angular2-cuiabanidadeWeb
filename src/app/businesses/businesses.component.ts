@@ -5,7 +5,8 @@ import * as Firebase from 'firebase';
 import { Observable } from 'rxjs/Rx';
 
 @Component({
-	templateUrl: "../views/businesses.html"
+	templateUrl: "../views/businesses.html",
+  styleUrls: ['./businesses.css']
 })
 export class BusinessesComponent {
 
@@ -30,5 +31,13 @@ export class BusinessesComponent {
       }
       return true;
    }
+
+	 cortarTexto(size, value){
+		 if (value && value.length > size) {
+				 return value.substr(0, size) + "...";
+		 }
+		 console.log(value);
+		 return value;
+	 }
 
 }

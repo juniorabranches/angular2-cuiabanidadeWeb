@@ -1,0 +1,108 @@
+<br>
+<br>
+<div class="container">
+  <div class="row" *ngFor="let b of businessDetails | async" [hidden]="filter(b.$key)">
+
+      <div class="col s12 m4 boxCentral">
+
+          <div class="card" >
+              <br>
+              <h4 class="textoCentralizado">{{b.name}}</h4>
+              <br>
+              <div class="card-image" class="image">
+                  <img src={{b.logo}} style="height: 300px; width: 300px"  class="z-depth-5" >
+              </div>
+              <br>
+              <br>
+          </div>
+      </div>
+
+      <div class="col s12 m6">
+          <div class="col s9 m3" class="card-panel status-panel darken-1 center-align">
+              <h4 class="textoCentralizado" class="card-title">Informações</h4>
+
+              <h6>“{{b.description}}”</h6>
+
+              <div class="contacts">
+                <a *ngIf="b.facebookPage" href="{{b.facebookPage}}" target="_blank" >
+                  <img src="../../assets/images/facebook.png"  >
+                </a>
+
+                <a *ngIf="b.email" href="mailto:{{b.email}}" target="_blank"  >
+                  <img src="../../assets/images/email.png">
+                </a>
+
+                <a href="#">
+                  <img *ngIf="b.phoneNumber" src="../../assets/images/phone.png"> <p *ngIf="b.phoneNumber">{{b.phoneNumber}}</p>
+                </a>
+              </div>
+
+          </div>
+
+          <sebm-google-map [latitude]="b.latitude" [longitude]="b.longitude" [zoom]="16" [disableDefaultUI]="false"  [zoomControl]="false">
+
+            <sebm-google-map-marker    [latitude]="b.latitude"
+                                       [longitude]="b.longitude"
+                                       [label]="b.name">
+
+                                       <sebm-google-map-info-window>
+                                         <strong class="black-text">{{b.name}}</strong>
+                                       </sebm-google-map-info-window>
+            </sebm-google-map-marker>
+
+
+
+
+          </sebm-google-map>
+
+      </div>
+
+      <div class="col s12 m2">
+        <div class="card" >
+            <br>
+            <h4 class="textoCentralizado">Horários</h4>
+            <br>
+              <p class="horarios" *ngIf="b.openhours.days[0]">
+                Domingo: {{getHours(b.openhours.days[0].openAt)}} até {{getHours(b.openhours.days[0].closeAt)}}0
+              </p>
+              <p class="horarios" *ngIf="b.openhours.days[1]">
+                Segunda: {{getHours(b.openhours.days[1].openAt)}} até {{getHours(b.openhours.days[1].closeAt)}}0
+              </p>
+              <p class="horarios" *ngIf="b.openhours.days[2]">
+                Terça: {{getHours(b.openhours.days[2].openAt)}} até {{getHours(b.openhours.days[2].closeAt)}}0
+              </p>
+              <p class="horarios" *ngIf="b.openhours.days[3]">
+                Quarta: {{getHours(b.openhours.days[3].openAt)}} até {{getHours(b.openhours.days[3].closeAt)}}0
+              </p>
+              <p class="horarios" *ngIf="b.openhours.days[4]">
+                Quinta: {{getHours(b.openhours.days[4].openAt)}} até {{getHours(b.openhours.days[4].closeAt)}}0
+              </p>
+              <p class="horarios" *ngIf="b.openhours.days[5]">
+                Sexta: {{getHours(b.openhours.days[5].openAt)}} até {{getHours(b.openhours.days[5].closeAt)}}0
+              </p>
+              <p class="horarios" *ngIf="b.openhours.days[6]">
+                Sábado: {{getHours(b.openhours.days[6].openAt)}} até {{getHours(b.openhours.days[6].closeAt)}}0
+              </p>
+            <br>
+            <br>
+        </div>
+      </div>
+
+      <div class="card-panel blue darken-1 center-align">
+
+
+      </div>
+
+  <!--    <div class="col s4">
+        <img *ngIf="b.pictures[0]" class="image" style="height: 150px; width: 150px"  class="z-depth-5" src={{b.pictures[0]}} alt="">
+      </div>
+      <div class="col s4">
+        <img *ngIf="b.pictures[1]" class="image" style="height: 150px; width: 150px"  class="z-depth-5" src={{b.pictures[1]}} alt="">
+      </div>
+      <div class="col s4">
+        <img *ngIf="b.pictures[2]" class="image" style="height: 150px; width: 150px"  class="z-depth-5" src={{b.pictures[2]}} alt="">
+      </div>
+    -->
+
+  </div>
+</div>

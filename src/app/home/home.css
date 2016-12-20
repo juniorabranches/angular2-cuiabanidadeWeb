@@ -1,0 +1,51 @@
+.image {
+    min-height: 450px;
+    text-align:center;
+    position: relative;
+}
+
+.imageStore {
+    min-height: 150px;
+    text-align:center;
+    position: relative;
+}
+
+.buttons {
+  text-align:center;
+  position: relative;
+}
+
+.textoCentralizado {
+  text-align:center;
+  position: relative;
+}
+
+
+.imageCarousel {
+    height:  50px;
+    width:  150px;
+    text-align:center;
+    align-self: center;
+    margin: 2.6875rem auto 5.4375rem;
+}
+
+.imageMosaico {
+    height: 200px;
+    width:  500px;
+    text-align:center;
+    align-self: center;
+    margin: 2.6875rem auto 5.4375rem;
+}
+
+.join-in-description {
+    align-self: center;
+    margin: 2.6875rem auto 5.4375rem;
+    text-align: center;
+}
+
+.join-in-description .join-in-title {
+    font-family: 'Roboto';
+    font-size: 3.625rem;
+    font-weight: 100;
+    margin-bottom: 2.0625rem;
+}

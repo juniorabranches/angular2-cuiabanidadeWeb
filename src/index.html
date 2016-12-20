@@ -21,7 +21,7 @@
   <!-- Your app -->
   <script type="text/javascript" src="app.js"></script>
 
-  <title>CuiabanidadeWeb</title>
+  <title>Cuiabanidade Web</title>
   <base href="/">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -30,30 +30,57 @@
 <body>
 
   <app-root>
-    <nav>
-      <div class="nav-wrapper blue">
-        <div class="container">
-          <a [routerLink]="['/home']" class="brand-logo">Cuiabanidade Web</a>
-          <ul class="right">
-    	      <li><a [routerLink]="['/home']">Home</a></li>
-    	      <li><a [routerLink]="['/categories']">Categorias</a></li>
-          </ul>
+      <nav>
+        <div class="nav-wrapper blue" >
+          <div class="container">
+            <!--<img class="brand-logo" src="../assets/images/logoCuiabanidade.png" alt="" style="height: 65px; width: 160px">-->
+            <a [routerLink]="['/home']" class="brand-logo">Cuiabanidade Web</a>
+            <ul class="right">
+      	      <li><a [routerLink]="['/home']">Home</a></li>
+      	      <li><a [routerLink]="['/categories']">Categorias</a></li>
+      	      <li><a [routerLink]="['/map']">Mapa</a></li>
+            </ul>
+          </div>
         </div>
+      </nav>
+
+      <div class="container">
+
       </div>
-    </nav>
+      <router-outlet></router-outlet>
 
-    <div class="container">
+      <div class="container">
 
-    </div>
-    <router-outlet></router-outlet>
+        <footer class="page-footer transparent">
 
-    <div class="container">
-      <footer class="center">
-        ©2016 Cuiabanidade | All Rights Reserved
-        <br/>
-        Cuiabanidade And All Respective Names are Trademark and © of AbranchesDev 2016-2017
-      </footer>
-    </div>
+          <div class="footer-copyright transparent">
+            <div class="container left">
+
+              <a href="https://play.google.com/store/apps/details?id=br.com.abranches.cuiabanidadeapp" target="_blank">
+                <img src="../../assets/images/android.png"  >
+              </a>
+              <a href="https://itunes.apple.com/br/app/cuiabanidade-app/id1163215900?mt=8" target="_blank">
+                <img src="../../assets/images/apple.png"  >
+              </a>
+              <a href="https://www.facebook.com/cuiabandiade" target="_blank">
+                <img src="../../assets/images/facebook.png"  >
+              </a>
+              <a href="https://www.facebook.com/cuiabandiade" target="_blank">
+                <img src="../../assets/images/instagram.png">
+              </a>
+
+            </div>
+          </div>
+        </footer>
+
+        <footer class="center">
+          <img src="../assets/images/logoCuiabanidade.png" alt="" style="height: 65px; width: 160px">
+          <br/>
+          ©2016 Cuiabanidade | All Rights Reserved
+          <br/>
+          Cuiabanidade And All Respective Names are Trademark and © of AbranchesDev 2016-2017
+        </footer>
+      </div>
   </app-root>
 
   <script src="/polyfills.bundle.js"></script>
@@ -63,21 +90,13 @@
   <script type="text/javascript" src="lib/jquery/dist/jquery.min.js"></script>
   <script type="text/javascript" src="lib/materialize/dist/js/materialize.min.js"></script>
   <script type="text/javascript">
-  $('.carousel').carousel({
-        dist:0,
-        shift:0,
-        padding:20,
-
-  });  
     $(document).ready(function() {
-
+      $('.slider').slider({full_width: true});
+      $('.carousel').carousel();
       Materialize.updateTextFields();
-      $('.carousel').carousel({
-            dist:0,
-            shift:0,
-            padding:20,
 
-      });
+
+
     });
   </script>
 </body>

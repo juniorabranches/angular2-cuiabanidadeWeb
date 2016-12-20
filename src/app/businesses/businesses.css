@@ -1,0 +1,6 @@
+.description{
+  max-width: 150px; /* Tamanho */
+  overflow: hidden;
+  text-overflow: '... (continuar lendo)';
+  white-space: wrap
+}

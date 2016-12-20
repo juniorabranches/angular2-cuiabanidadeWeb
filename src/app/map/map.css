@@ -1,0 +1,10 @@
+.sebm-google-map-container {
+  height: 500px;
+  text-align:center;
+  position: relative;
+  align-content: center;
+}
+
+.infoButton{
+  color: #000 
+}

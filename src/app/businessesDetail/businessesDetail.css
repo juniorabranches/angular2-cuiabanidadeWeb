@@ -1,0 +1,42 @@
+.image {
+    min-height: 250px;
+    text-align:center;
+    position: relative;
+}
+
+.horarios {
+    text-align:center;
+    font-size: 12px;
+}
+
+.boxCentral {
+    text-align:center;
+    position: relative;
+    align-content: center;
+}
+
+.buttons {
+  text-align:center;
+  position: relative;
+}
+
+.textoCentralizado {
+  text-align:center;
+  position: relative;
+}
+
+.contacts{
+  text-align:left;
+  position: relative;
+}
+
+.sebm-google-map-container {
+  height: 250px;
+  text-align:center;
+  position: relative;
+  align-content: center;
+}
+
+.infoButton{
+  color: #000
+}

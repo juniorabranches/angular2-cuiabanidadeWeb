@@ -1,11 +1,13 @@
 
   <nav>
-    <div class="nav-wrapper blue">
+    <div class="nav-wrapper blue" >
       <div class="container">
+        <!--<img class="brand-logo" src="../assets/images/logoCuiabanidade.png" alt="" style="height: 65px; width: 160px">-->
         <a [routerLink]="['/home']" class="brand-logo">Cuiabanidade Web</a>
         <ul class="right">
   	      <li><a [routerLink]="['/home']">Home</a></li>
   	      <li><a [routerLink]="['/categories']">Categorias</a></li>
+      	  <li><a [routerLink]="['/map']">Mapa</a></li>
         </ul>
       </div>
     </div>
@@ -17,7 +19,32 @@
     <router-outlet></router-outlet>
 
     <div class="container">
+
+      <footer class="page-footer transparent">
+
+        <div class="footer-copyright transparent">
+          <div class="container left">
+
+            <a href="https://play.google.com/store/apps/details?id=br.com.abranches.cuiabanidadeapp" target="_blank">
+              <img src="../../assets/images/android.png"  >
+            </a>
+            <a href="https://itunes.apple.com/br/app/cuiabanidade-app/id1163215900?mt=8" target="_blank">
+              <img src="../../assets/images/apple.png"  >
+            </a>
+            <a href="https://www.facebook.com/cuiabandiade" target="_blank">
+              <img src="../../assets/images/facebook.png"  >
+            </a>
+            <a href="https://www.facebook.com/cuiabandiade" target="_blank">
+              <img src="../../assets/images/instagram.png">
+            </a>
+
+          </div>
+        </div>
+      </footer>
+
       <footer class="center">
+        <img src="../assets/images/logoCuiabanidade.png" alt="" style="height: 65px; width: 160px">
+        <br/>
         ©2016 Cuiabanidade | All Rights Reserved
         <br/>
         Cuiabanidade And All Respective Names are Trademark and © of AbranchesDev 2016-2017

@@ -1,1 +1,114 @@
-<br><br><br><br><h1>teste</h1>
+<br>
+<br>
+<div class="container">
+  <div class="row">
+      <div class="col s12 m4 blue">
+
+          <div class="card">
+              <br>
+              <div class="card-image" class="image">
+                  <img src="../../assets/images/cuiabanidadePlanos.png" style="height: 450px; width: 350px"  class="z-depth-5" >
+  <!--                <span class="card-title">Vote form</span>-->
+              </div>
+              <div class="card-content">
+                  <br>
+
+                  <h5 class="textoCentralizado" >Quero contratar</h5>
+                  <div class="row">
+                      <div class="input-field col s12">
+                          <input id="username" #email type="text" class="validate">
+                          <label for="username">Email</label>
+                      </div>
+                      <div class="input-field col s12">
+                          <input id="username" #empresa type="text">
+                          <label for="username">Empresa</label>
+                      </div>
+                      <div class="input-field col s12">
+                          <textarea id="comment" #comment class="materialize-textarea" maxlength="150"></textarea>
+                          <label for="username">Descrição</label>
+                      </div>
+                  </div>
+
+                  <div class="row" class="buttons">
+
+                      <a (click)="contratar('mensal',email.value, empresa.value, comment.value)"
+                         class="btn blue"  style="width: 150px"><i
+                              class="mdi-action-thumb-up"></i> Mensal</a>
+                      <a (click)="contratar('trimestral',email.value,  empresa.value, comment.value)"
+                         class="red-button waves-effect waves-light btn blue right-align" style="width: 150px"><i
+                              class="mdi-action-thumb-up"></i> Trimestral</a>
+                      <br>
+                      <br>
+
+                      <a (click)="contratar('semestral',email.value,  empresa.value, comment.value)"
+                         class="red-button waves-effect waves-light btn blue right-align" style="width: 150px"><i
+                              class="mdi-action-thumb-up"></i> Semestral</a>
+                      <a (click)="contratar('anual',email.value,  empresa.value, comment.value)"
+                         class="red-button waves-effect waves-light btn blue right-align" style="width: 150px"><i
+                              class="mdi-action-thumb-up"></i> Anual</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+
+      <div class="col s12 m6 latest-vote">
+          <div class="card">
+            <div class="col s9 m3" class="card-panel status-panel blue center-align white-text">
+                <h6 class="card-title">Últimos Comentários</h6>
+
+                <div *ngFor="let comment of items | async">
+                  <small>{{comment.author}}  comentou “{{comment.comment}}” sobre {{comment.businessName}}</small>
+                </div>
+
+            </div>
+          </div>
+      </div>
+
+      <div class="col s6 m6">
+        <br><br><br>
+        <br><br><br>
+        <br><br><br>
+        <br><br><br>
+        <br><br><br>
+        <br><br><br>
+        <br><br><br>
+          <div class="join-in-description">
+            <h2 class="join-in-title">Baixe já</h2>
+            <p>Faça o download do App Cuiabanidade e confira.</p>
+            <ul class="download">
+              <li>
+                <a href="https://play.google.com/store/apps/details?id=br.com.abranches.cuiabanidadeapp" target="_blank"><img  class="imageCarousel"  src="../../assets/images/googlePlay.png"></a>
+                <a href="https://itunes.apple.com/br/app/cuiabanidade-app/id1163215900?mt=8" target="_blank"><img class="imageCarousel" src="../../assets/images/appStore.png"></a>
+              </li>
+            </ul>
+
+        </div>
+
+        <!--<div class="carousel">
+
+          <a class="carousel-item" [routerLink]="['/businesses', 'categoriaAcademia']"><img class="imageCarousel" src="http://www.olhardireto.com.br/conceito/imgsite/noticias/smartfit.jpg"></a>
+          <a class="carousel-item" href="#two!"><img class="imageCarousel" src="http://salomebar.com.br/wp-content/uploads/2015/05/Salom%C3%A9-97-1024x683.jpg"></a>
+          <a class="carousel-item" href="#three!"><img class="imageCarousel" src="http://www.nuun.me/imagens/img7.jpg"></a>
+          <a class="carousel-item" href="#four!"><img class="imageCarousel" src="https://destemperados.s3.amazonaws.com/arquivos/ckeditor/CNcMFcgJBcsTMqGcwFn/emporio-serra-grande-04-la-trappe-wit-a-primeira-.jpg"></a>
+          <a class="carousel-item" href="#five!"><img class="imageCarousel" src="https://1.bp.blogspot.com/-vPZ8pwsTogg/V4URDHnNqGI/AAAAAAAABA8/eqnzGa7bFtEywZQktbEe-vQcBPEaRs2eQCLcB/s1600/IMG-20160712-WA0001%255B1%255D.jpg"></a>
+          <a class="carousel-item" href="#five!"><img class="imageCarousel" src="http://www.olhardireto.com.br/conceito/imgsite/noticias/unnamed(12).jpg"></a>
+          <a class="carousel-item" href="#five!"><img class="imageCarousel" src="https://img.grouponcdn.com/deal/frSBtFVy5xNyiQnHnPnscc/shutterstock_28973011-1500x900/v1/c700x420.jpg"></a>
+          <a class="carousel-item" href="#five!"><img class="imageCarousel" src="http://2.bp.blogspot.com/_3L-Ec5Fe01g/SnMcKm82SrI/AAAAAAAAAKI/JVuu8roDud0/s400/crian%C3%A7as.bmp"></a>
+          <a class="carousel-item" href="#five!"><img class="imageCarousel" src="http://meencantacostarica.com/wp-content/uploads/2015/06/Pizza-Hut-Paseo-colon-000-800x576.jpg"></a>
+          <a class="carousel-item" href="#five!"><img class="imageCarousel" src="http://valley.com.br/uploads/institucional/8/127.jpg"></a>
+          <a class="carousel-item" href="#five!"><img class="imageCarousel" src="https://travelwhiz.files.wordpress.com/2013/09/le-bilboquet-sao-paulo-travel-whiz.jpg"></a>
+          <a class="carousel-item" href="#five!"><img class="imageCarousel" src="http://www.investseguros.com.br/images/empresa/0139885001413208345.jpg"></a>
+          <a class="carousel-item" href="#five!"><img class="imageCarousel" src="http://namiradalei.com.br/barradobugres/wp-content/uploads/2016/06/shoping-pantanal.jpg"></a>
+          <a class="carousel-item" href="#five!"><img class="imageCarousel" src="http://f.i.uol.com.br/folha/ilustrada/images/15251106.jpeg"></a>
+          <a class="carousel-item" href="#five!"><img class="imageCarousel" src="https://img.peixeurbano.com.br/?img=https://s3.amazonaws.com/pu-mgr/default/a0RG000000ScmR6MAJ/5346e350e4b03a83ed4314bc.jpg&w=620&h=400"></a>
+          <a class="carousel-item" href="#five!"><img class="imageCarousel" src="https://imagesapt.apontador-assets.com/fit-in/640x480/0228b24fb7e243bbb34b2ff347b245d4/nevaska-sorveteria.jpg"></a>
+
+        </div> -->
+      </div>
+
+
+
+
+  </div>
+</div>
