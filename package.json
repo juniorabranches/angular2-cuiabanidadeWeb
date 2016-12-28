@@ -14,9 +14,9 @@
     "build": "webpack --inline --colors --progress --display-error-details --display-cached",
     "watch": "npm run build -- --watch",
     "server": "webpack-dev-server --inline --colors --progress --display-error-details --display-cached --port 3000  --content-base src",
-    "start": "http-server dist/",
+    "start": "http-server",
     "preinstall": "npm install -g http-server",
-    "postinstall": "ng build && mv dist/* ."
+    "postinstall": "ng build"
   },
   "private": true,
   "dependencies": {
